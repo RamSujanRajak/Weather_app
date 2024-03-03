@@ -1,0 +1,249 @@
+/* .form-container.active{
+    scale: 1;
+    opacity: 1;
+    display: flex;
+} */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;1,300&display=swap');
+
+*,*::before,*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+:root{
+    --colorDark1:#112D4E;
+    --colorDark2: #10407b;
+    --cotorLight1: #dBE2EF;
+    --colorLight2: #F9F7F7;
+}
+
+.wrapper{
+    width: 100vw;
+    height: 100vh;
+    color: var(--colorLight2);
+    background-image: linear-gradient(160deg, rgb(130, 191, 205) 0%, rgb(59, 113, 188) 100%);
+}
+
+h1{
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: 20px;
+}
+
+.tab-container{
+    display: flex;
+    width: 90%;
+    margin: 4rem;
+    max-width: 550px;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.tab{
+    cursor: pointer;
+    font-size: 0.875rem;
+    letter-spacing: 1.75px;
+    padding: 5px 15px;
+    margin-top: 20px;
+}
+
+.tab.current-tab{
+    background-color: rgb(207, 231, 231);
+    border-radius: 9%;
+    transition: .5s;
+    color: black ;
+}
+
+.weather-container{
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-block: 4rem; */
+    margin-block: 4rem;
+}
+
+.btn{
+    all: unset;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    border-radius: 5px;
+    background-color: var(--colorDark2);
+    cursor: pointer;
+    padding: 10px 30px;
+    margin-bottom: 10px;
+}
+
+.sub-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.grant-location-container{
+    display: none;
+}
+
+.grant-location-container.active{
+    display: flex;
+}
+
+.grant-location-container img{
+    margin-bottom: 2rem;
+}
+
+.grant-location-container p:first-of-type{
+    font-size: 1.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: .85rem;
+
+}
+
+.grant-location-container p:last-of-type{
+    font-size: .85rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 1.75rem;
+    letter-spacing: 0.75px;
+
+}
+
+.loading-container{
+    display: none;
+}
+.loading-container.active{
+    display: flex;
+}
+
+.loading-container p{
+    text-transform: uppercase;
+}
+
+.user-info-container{
+    display:none;
+}
+
+.user-info-container.active{
+    display: flex;
+}
+
+.name{
+    display: flex;
+    align-items: center;
+    gap: 0 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.user-info-container p{
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+.user-info-container img{
+    width: 90px;
+    height: 91px;
+}
+
+.name p{
+    font-size: 2rem;
+
+}
+
+.name img{
+    width: 30px;
+    height: 30px;
+}
+
+.user-info-container p[data-temp] {
+    font-size: 2.75rem;
+    font-weight: 700;
+}
+
+.parameter-conntainer{
+    
+    display: flex;
+    gap: 50px 100px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.perameter{
+    align-items: center; 
+    width: 30%;
+    max-width: 200px;
+    background-image: linear-gradient(160deg, rgb(93, 178, 227) 0%, rgb(34, 72, 154) 100%);
+    border-radius: 10px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 5px 0;
+}
+
+.perameter img{
+    width: 50px;
+    height: 50px;
+}
+
+.perameter p:first-of-type{
+    font-size: 1.15rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.perameter p:last-of-type{
+    font-size: 1rem;
+    font-weight: 200;
+}
+
+.form-container{
+    display: none;
+    width: 90%;
+    max-width: 550px;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    gap: 0 10px;
+    margin-bottom: 3rem;
+}
+.form-container.active{
+    display: flex;
+}
+
+.form-container input{
+    width: calc(100% - 80px);
+    height: 40px;
+    padding: 0 20px;
+    background-color: aliceblue 0.5;
+    border-radius: 10px;
+    border: none;
+}
+
+.form-container input::placeholder{
+    color: black 0.7;
+    font-size: 1.2rem;
+}
+
+.form-container input:focus{
+    background-color: rgb(130, 188, 239);
+    color: rgb(18, 13, 13);
+    outline: #F9F7F7;
+    font-size: 1.2rem;
+    transition: .3s;
+}
+
+.form-container .btn{
+    padding: unset;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    margin-bottom: 1px;
+    
+}
