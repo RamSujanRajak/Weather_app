@@ -1,5 +1,5 @@
-const userTab = document.querySelector("[data-userWeather]")
-const searchTab = document.querySelector("[data-searchWeather]")
+const userTab = document.querySelector("[data-userWeather]") //your weather 
+const searchTab = document.querySelector("[data-searchWeather]") // search weather
 const userContainer = document.querySelector(".weather-container")
 
 const grantAccessContainer = document.querySelector(".grant-location-container")
@@ -30,7 +30,6 @@ function switchTab(clickedTab){
             getfromSessionStorage();
         }
     }
-    console.log("hello")
 }
 
 userTab.addEventListener("click", ()=>{
@@ -69,7 +68,7 @@ async function fetchUserWeatherInfo(coordinates){
         loadingScreen.classList.remove("active");
         userInfoContainer.classList.add("active");
         renderWeatherInfo(data)
-        // console.log(data)
+        console.log(data)
     }
     catch(err){
         //home work
@@ -89,7 +88,7 @@ function renderWeatherInfo(weatherInfo){
     const cloudiness = document.querySelector("[data-cloudiness]")
 
     cityName.innerText = weatherInfo?.name;
-    countryIcon.src = `https://flagcdn.com/144x108/${weatherInfo?.sys?.country.toLowerCase()}.pnq`;
+    countryIcon.src = `https://flagcdn.com/144x108/${weatherInfo?.sys?.country.toLowerCase()}.png`;
     desc.innerText = weatherInfo?.weather?.[0]?.description;
     weatherIcon.src = `http://openweathermap.org/img/w/${weatherInfo?.weather?.[0]?.icon}.png`;
     temp.innerText = `${weatherInfo?.main?.temp} °C`;
@@ -119,7 +118,7 @@ function showPosition(position){
 }
 
 const grantAccessButton = document.querySelector("[data-grantAccess]")
-grantAccessButton.addEventListener("click",getLocation());
+grantAccessButton.addEventListener("click",getLocation);
 
 const searchInput = document.querySelector("[data-searchInput]");
 
@@ -161,7 +160,7 @@ async function fetchSearchWeatherInfo(city){
 
 
 
-// /*const API_KEY = "d1845658f92b31c64bd94f06f7188c9c";
+// const API_KEY = "d1845658f92b31c64bd94f06f7188c9c";
 // showWeather()
 // getCustomWeatherDetails()
 // getLocation()
@@ -226,4 +225,3 @@ async function fetchSearchWeatherInfo(city){
 //     console.log(long);
 // }
 
-// */
